@@ -1,0 +1,254 @@
+* {
+  /* Met le margin et le padding à 0 à chaque projet afin
+de pouvoir le définir sur chaque élément soit même.
+Utiliser fréquemment.*/
+
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE SELECTION */
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+
+/*Meme si la couleur grise a été mise pour l'ensemble
+des élements, un autre valeur de couleur pour les titres
+écrases la grises car elle arrive après.
+*/
+
+.container {
+  width: 700px;
+  /* margin-left: auto;
+  margin-right: auto;  égal à en dessous*/
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px; 
+  1ere valeur du padding défini haut et bas
+  2eme valeur defini gauche et droite.*/
+  padding: 50px 0;
+  width: 500px;
+}
+
+/* SMALLER ELEMENTS */
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Ci-dessous on ne cible que l'élement "p" contenu dans le footer*/
+/* footer p {
+  font-size: 16px;
+} */
+
+#copyright {
+  font-size: 16px;
+}
+
+/* "#" cible un id en html ici (p id="auther") */
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/*"." cible une classe attribuer à plusieurs éléments HTML */
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* supprime les puces */
+.related-posts {
+  list-style: none;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/*
+Même  résultat  qu'au dessus.
+le ":" permet directement de styliser le premier sous élément
+d'un élément. Ici on a deux "li" à différent endroit qui sont
+prix en compte. */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/*li:nth-child(even) {
+   li:nth-child(2) numero de la liste/ (odd) nombre impair / (even)nombre pair */
+/*color: red;*
+}/
+
+/*Mauvaise conception: poourquoi ça ne fonctionne pas */
+article p:first-child {
+  color: red;
+}
+
+/* Styling links - TOUJOURS DANS CET ORDRE LVHA */
+/* spécifier link pour ceux qui ont un "href" */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+/* Si on a déja cliqué sur un lien  pour qu'il ne change pas
+de couleur */
+a:visited {
+  color: #1098ad;
+}
+
+/* hover quand on passe la souris sur un lien*/
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orchid;
+  /* défini 3 valeurs (surlignement, tiret et couleur*/
+}
+
+/* active permet de changer le style quand on clic
+ sur l'élément */
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* IMAGES */
+.post-img {
+  /* 100% s'adapte à l'affiche de l'écran. */
+  width: 100%;
+  height: auto; /* auto car propriété mise sur le html */
+}
+
+nav a:link {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+/* Dernier lien de nav pas marge à droit. */
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  /* la position absolute fixe l'element et bottom et right
+  definisse son emplacement. Ici dans body.
+  On indique la position relation à Body. */
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
